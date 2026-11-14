@@ -1,0 +1,205 @@
+[
+  {
+    "id": "rfc9111-q01",
+    "type": "direct",
+    "split": "dev",
+    "question": "What is the purpose of an HTTP cache?",
+    "expected_answer": "It stores cacheable responses so equivalent future requests can be served with less delay and network bandwidth.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 4,
+    "evidence_quote": "A cache stores cacheable responses to reduce the response time and network bandwidth consumption on future equivalent requests."
+  },
+  {
+    "id": "rfc9111-q02",
+    "type": "direct",
+    "split": "dev",
+    "question": "What information must be present in the minimum HTTP cache key described in the overview?",
+    "expected_answer": "At minimum, the request method and target URI used to retrieve the stored response.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 6,
+    "evidence_quote": "The \"cache key\" is the information a cache uses to choose a response and is composed from, at a minimum, the request method and target URI used to retrieve the stored response"
+  },
+  {
+    "id": "rfc9111-q03",
+    "type": "conditions",
+    "split": "dev",
+    "question": "Name two kinds of responses, other than successful GET responses, that a cache can store when the method definition permits caching and supplies a suitable cache key.",
+    "expected_answer": "Examples include redirects, negative results such as 404, incomplete results such as 206, or responses to methods other than GET, provided the method definition allows caching and defines a suitable cache key.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 7,
+    "evidence_quote": "it is also possible to store redirects, negative results (e.g., 404 (Not Found)), incomplete results (e.g., 206 (Partial Content)), and responses to methods other than GET if the method's definition allows such caching and defines something suitable for use as a cache key."
+  },
+  {
+    "id": "rfc9111-q04",
+    "type": "direct",
+    "split": "dev",
+    "question": "What status-code condition must a response meet under the basic cache-storage requirements?",
+    "expected_answer": "Its status code must be final.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 7,
+    "evidence_quote": "the response status code is final (see Section 15 of [HTTP]);"
+  },
+  {
+    "id": "rfc9111-q05",
+    "type": "exception",
+    "split": "dev",
+    "question": "Are caches permitted to store a response that has neither a cache validator nor an explicit expiration time?",
+    "expected_answer": "Yes. Such responses are not usually useful to store, but caches are not prohibited from storing them.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 7,
+    "evidence_quote": "Note that, in normal operation, some caches will not store a response that has neither a cache validator nor an explicit expiration time, as such responses are not usually useful to store. However, caches are not prohibited from storing such responses."
+  },
+  {
+    "id": "rfc9111-q06",
+    "type": "conditions",
+    "split": "dev",
+    "question": "Which trailer-field storage choices are allowed, and what combination is forbidden?",
+    "expected_answer": "A cache may store trailer fields separately from header fields or discard them, but must not combine trailer fields with header fields.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 8,
+    "evidence_quote": "Caches MAY either store trailer fields separate from header fields or discard them. Caches MUST NOT combine trailer fields with header fields."
+  },
+  {
+    "id": "rfc9111-q07",
+    "type": "conditions",
+    "split": "dev",
+    "question": "Under what keying condition may a cache store proxy-specific request header fields that would otherwise be excluded?",
+    "expected_answer": "Only if the cache incorporates the identity of the proxy into the cache key.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 8,
+    "evidence_quote": "Header fields that are specific to the proxy that a cache uses when forwarding a request MUST NOT be stored, unless the cache incorporates the identity of the proxy into the cache key."
+  },
+  {
+    "id": "rfc9111-q08",
+    "type": "conditions",
+    "split": "dev",
+    "question": "When can a cache use an incomplete stored response to answer a request?",
+    "expected_answer": "Only after the response has been completed, or when the request is partial and its requested range lies wholly within the incomplete response.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 9,
+    "evidence_quote": "A cache MUST NOT use an incomplete response to answer requests unless the response has been made complete, or the request is partial and specifies a range wholly within the incomplete response."
+  },
+  {
+    "id": "rfc9111-q09",
+    "type": "conditions",
+    "split": "dev",
+    "question": "What validator condition allows a cache to combine transferred ranges into one stored response?",
+    "expected_answer": "All ranges must share the same strong validator, and the cache must comply with the client's requirements.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 9,
+    "evidence_quote": "A cache MAY combine these ranges into a single stored response, and reuse that response to satisfy later requests, if they all share the same strong validator and the cache complies with the client requirements in Section 15.3.7.3 of [HTTP]."
+  },
+  {
+    "id": "rfc9111-q10",
+    "type": "direct",
+    "split": "dev",
+    "question": "What does the max-age request directive express as the client's preference?",
+    "expected_answer": "The client prefers a response whose age is no greater than the specified number of seconds; unless max-stale is also present, it does not want a stale response.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 21,
+    "evidence_quote": "The max-age request directive indicates that the client prefers a response whose age is less than or equal to the specified number of seconds. Unless the max-stale request directive is also present, the client does not wish to receive a stale response."
+  },
+  {
+    "id": "rfc9111-q11",
+    "type": "paraphrase",
+    "split": "dev",
+    "question": "How does a max-stale request directive with no numeric argument differ from one with a value?",
+    "expected_answer": "With a value, the client accepts staleness only up to that many seconds beyond freshness lifetime; without a value, it accepts a stale response of any age.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 21,
+    "evidence_quote": "The max-stale request directive indicates that the client will accept a response that has exceeded its freshness lifetime. If a value is present, then the client is willing to accept a response that has exceeded its freshness lifetime by no more than the specified number of seconds. If no value is assigned to max-stale, then the client will accept a stale response of any age."
+  },
+  {
+    "id": "rfc9111-q12",
+    "type": "filter",
+    "split": "dev",
+    "question": "In the response-directive section, what must a cache do when a response governed by must-revalidate is stale and the cache is disconnected?",
+    "filter": {"field": "section", "op": "eq", "value": "5.2.2.2. must-revalidate"},
+    "expected_answer": "It must not reuse the stale response; it must generate an error response, normally 504 unless another error code is more applicable.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 22,
+    "evidence_quote": "if a cache is disconnected, the cache MUST generate an error response rather than reuse the stale response. The generated status code SHOULD be 504 (Gateway Timeout) unless another error status code is more applicable."
+  },
+  {
+    "id": "rfc9111-q13",
+    "type": "paraphrase",
+    "split": "dev",
+    "question": "What is the effect of a qualified no-cache response directive listing header fields?",
+    "expected_answer": "The cache may reuse the response if the listed fields are omitted from the subsequent response or that subsequent response is successfully revalidated; the remainder may still be cached.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 23,
+    "evidence_quote": "The qualified form of the no-cache response directive, with an argument that lists one or more field names, indicates that a cache MAY use the response to satisfy a subsequent request, subject to any other restrictions on caching, if the listed header fields are excluded from the subsequent response or the subsequent response has been successfully revalidated with the origin server (updating or removing those fields). This allows an origin server to prevent the reuse of certain header fields in a response, while still allowing caching of the rest of the response."
+  },
+  {
+    "id": "rfc9111-q14",
+    "type": "exception",
+    "split": "dev",
+    "question": "Does the no-store response directive guarantee privacy, and what caveat does the specification give?",
+    "expected_answer": "No. It is not a reliable or sufficient privacy mechanism because malicious or compromised caches may ignore it and networks may be vulnerable to eavesdropping.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 23,
+    "evidence_quote": "This directive is not a reliable or sufficient mechanism for ensuring privacy. In particular, malicious or compromised caches might not recognize or obey this directive, and communications networks might be vulnerable to eavesdropping."
+  },
+  {
+    "id": "rfc9111-q15",
+    "type": "filter",
+    "split": "dev",
+    "question": "In the response-directive section, what storage restriction does the unqualified private directive impose on shared caches, and what may a private cache do?",
+    "filter": {"field": "section", "op": "eq", "value": "5.2.2.7. private"},
+    "expected_answer": "A shared cache must not store the response; a private cache may store it subject to Section 3 constraints, even if it would not otherwise be heuristically cacheable by a private cache.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 24,
+    "evidence_quote": "The unqualified private response directive indicates that a shared cache MUST NOT store the response (i.e., the response is intended for a single user). It also indicates that a private cache MAY store the response, subject to the constraints defined in Section 3, even if the response would not otherwise be heuristically cacheable by a private cache."
+  },
+  {
+    "id": "rfc9111-q16",
+    "type": "direct",
+    "split": "test",
+    "question": "What condition makes a response fresh, and how is a stale response characterized?",
+    "expected_answer": "A response is fresh while its age has not exceeded its freshness lifetime; it is stale once it has exceeded that lifetime.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 12,
+    "evidence_quote": "A \"fresh\" response is one whose age has not yet exceeded its freshness lifetime. Conversely, a \"stale\" response is one where it has."
+  },
+  {
+    "id": "rfc9111-q17",
+    "type": "conditions",
+    "split": "test",
+    "question": "If both max-age and Expires are present, which value is used to calculate freshness lifetime for a shared cache?",
+    "expected_answer": "The shared cache uses max-age when that directive is present; if s-maxage is present it takes precedence for shared caches. Otherwise, Expires is considered after max-age.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 13,
+    "evidence_quote": "If the cache is shared and the s-maxage response directive (Section 5.2.2.10) is present, use its value, or If the max-age response directive (Section 5.2.2.1) is present, use its value, or If the Expires response header field (Section 5.3) is present, use its value minus the value of the Date response header field"
+  },
+  {
+    "id": "rfc9111-q18",
+    "type": "exception",
+    "split": "test",
+    "question": "When is a cache prohibited from using heuristics to determine freshness?",
+    "expected_answer": "Whenever the stored response has an explicit expiration time.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 13,
+    "evidence_quote": "A cache MUST NOT use heuristics to determine freshness when an explicit expiration time is present in the stored response."
+  },
+  {
+    "id": "rfc9111-q19",
+    "type": "filter",
+    "split": "test",
+    "question": "In Section 4.4, after a non-error response to an unsafe request, which URI must an intervening cache invalidate, and which origin limitation applies to invalidating other URIs?",
+    "filter": {"field": "section", "op": "eq", "value": "4.4. Invalidating Stored Responses"},
+    "expected_answer": "It must invalidate the target URI. It may invalidate other URIs, including Location or Content-Location values, only when the URI to be invalidated has the same origin as the target URI.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 19,
+    "evidence_quote": "A cache MUST invalidate the target URI (Section 7.1 of [HTTP]) when it receives a non-error status code in response to an unsafe request method (including methods whose safety is unknown). A cache MAY invalidate other URIs when it receives a non-error status code in response to an unsafe request method (including methods whose safety is unknown). In particular, the URI(s) in the Location and Content-Location response header fields (if present) are candidates for invalidation; other URIs might be discovered through mechanisms not specified in this document. However, a cache MUST NOT trigger an invalidation under these conditions if the origin (Section 4.3.1 of [HTTP]) of the URI to be invalidated differs from that of the target URI (Section 7.1 of [HTTP])."
+  },
+  {
+    "id": "rfc9111-q20",
+    "type": "paraphrase",
+    "split": "test",
+    "question": "What does an Age field imply about a response, and what cannot be concluded from its absence?",
+    "expected_answer": "Its presence means the response was not generated or validated by the origin for this request; its absence does not establish that the origin was contacted.",
+    "gold_source_id": "rfc9111",
+    "gold_page": 20,
+    "evidence_quote": "The presence of an Age header field implies that the response was not generated or validated by the origin server for this request. However, lack of an Age header field does not imply the origin was contacted."
+  }
+]

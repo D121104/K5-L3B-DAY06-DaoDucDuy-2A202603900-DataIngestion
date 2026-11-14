@@ -1,0 +1,151 @@
+position,source,page,source_excerpt_for_orientation_only,strategy,candidate_chunk_ids,score_0_to_2,reason
+1,https://www.rfc-editor.org/rfc/rfc9111.pdf,4,"5.5. Warning
+6. Relationship to Applications and Other Caches
+7. Security Considerations
+7.1. Cache Poisoning
+7.2. Timing Attacks
+7.3. Caching of Sensitive Information
+8. IANA Considerations
+8.1. Field Name Registration
+8.2. Cache Directive Registration
+8.3. Warn Code Registry
+9. References
+9.1. Nor",A,"[""rfc9111:4:fixed_size:0"", ""rfc9111:4:fixed_size:1"", ""rfc9111:4:fixed_size:2""]",1,"AI-assisted preliminary; Extracted page 4 starts with TOC headings, then the introduction. A windows split the cache definition over chunks 0-2, so the sampled material is partly continuous (1/2)."
+1,https://www.rfc-editor.org/rfc/rfc9111.pdf,4,"5.5. Warning
+6. Relationship to Applications and Other Caches
+7. Security Considerations
+7.1. Cache Poisoning
+7.2. Timing Attacks
+7.3. Caching of Sensitive Information
+8. IANA Considerations
+8.1. Field Name Registration
+8.2. Cache Directive Registration
+8.3. Warn Code Registry
+9. References
+9.1. Nor",B,"[""rfc9111:4:by_paragraph:0"", ""rfc9111:4:by_paragraph:1""]",1,"AI-assisted preliminary; Chunk 0 is TOC headings; chunk 1 starts mid-definition ('storage, retrieval') and runs into page furniture, so no complete introduction idea is preserved (1/2)."
+1,https://www.rfc-editor.org/rfc/rfc9111.pdf,4,"5.5. Warning
+6. Relationship to Applications and Other Caches
+7. Security Considerations
+7.1. Cache Poisoning
+7.2. Timing Attacks
+7.3. Caching of Sensitive Information
+8. IANA Considerations
+8.1. Field Name Registration
+8.2. Cache Directive Registration
+8.3. Warn Code Registry
+9. References
+9.1. Nor",C,"[""rfc9111:4:by_paragraph:0"", ""rfc9111:4:by_paragraph:1""]",1,"AI-assisted preliminary; C has the same chunks as B: chunk 0 is TOC headings and chunk 1 starts mid-definition ('storage, retrieval'), leaving no complete introduction idea (1/2)."
+2,https://www.rfc-editor.org/rfc/rfc9111.pdf,5,"The goal of HTTP caching is signiﬁcantly improving performance by reusing a prior response
+message to satisfy a current request. A cache considers a stored response ""fresh"", as deﬁned in
+Section 4.2, if it can be reused without ""validation"" (checking with the origin server to see if the
+cached respo",A,"[""rfc9111:5:fixed_size:0"", ""rfc9111:5:fixed_size:1"", ""rfc9111:5:fixed_size:2"", ""rfc9111:5:fixed_size:3"", ""rfc9111:5:fixed_size:4"", ""rfc9111:5:fixed_size:5""]",1,"AI-assisted preliminary; Chunk 0 cuts the freshness/reuse paragraph at 'reusa'; chunk 1 restores its ending and carries shared/private-cache definitions, so the key explanation is split across windows (1/2)."
+2,https://www.rfc-editor.org/rfc/rfc9111.pdf,5,"The goal of HTTP caching is signiﬁcantly improving performance by reusing a prior response
+message to satisfy a current request. A cache considers a stored response ""fresh"", as deﬁned in
+Section 4.2, if it can be reused without ""validation"" (checking with the origin server to see if the
+cached respo",B,"[""rfc9111:5:by_paragraph:0"", ""rfc9111:5:by_paragraph:1"", ""rfc9111:5:by_paragraph:2""]",2,AI-assisted preliminary; Chunk 0 contains the complete caching-performance and freshness/validation explanation plus shared/private-cache definitions; these ideas are independently understandable (2/2).
+2,https://www.rfc-editor.org/rfc/rfc9111.pdf,5,"The goal of HTTP caching is signiﬁcantly improving performance by reusing a prior response
+message to satisfy a current request. A cache considers a stored response ""fresh"", as deﬁned in
+Section 4.2, if it can be reused without ""validation"" (checking with the origin server to see if the
+cached respo",C,"[""rfc9111:5:by_paragraph:0"", ""rfc9111:5:by_paragraph:1"", ""rfc9111:5:by_paragraph:2""]",2,"AI-assisted preliminary; Chunk 0 preserves the complete caching-performance and freshness/validation explanation and shared/private-cache definitions, so the sampled ideas are self-contained (2/2)."
+3,https://www.rfc-editor.org/rfc/rfc9111.pdf,6,"1.2.2. Delta Seconds
+The delta-seconds rule speciﬁes a non-negative integer, representing time in seconds.
+A recipient parsing a delta-seconds value and converting it to binary form ought to use an
+arithmetic type of at least 31 bits of non-negative integer range. If a cache receives a delta-
+second",A,"[""rfc9111:6:fixed_size:0"", ""rfc9111:6:fixed_size:1"", ""rfc9111:6:fixed_size:2"", ""rfc9111:6:fixed_size:3"", ""rfc9111:6:fixed_size:4"", ""rfc9111:6:fixed_size:5""]",1,AI-assisted preliminary; Chunks 0-2 split the delta-seconds overflow rule and historical note; chunk 0 ends at 'it' and chunk 1 cuts the note before chunk 2 completes it. Meaning is recoverable but fragmented (1/2).
+3,https://www.rfc-editor.org/rfc/rfc9111.pdf,6,"1.2.2. Delta Seconds
+The delta-seconds rule speciﬁes a non-negative integer, representing time in seconds.
+A recipient parsing a delta-seconds value and converting it to binary form ought to use an
+arithmetic type of at least 31 bits of non-negative integer range. If a cache receives a delta-
+second",B,"[""rfc9111:6:by_paragraph:0"", ""rfc9111:6:by_paragraph:1"", ""rfc9111:6:by_paragraph:2""]",1,"AI-assisted preliminary; Chunk 0 contains the delta-seconds rule and overflow note, then continues into the overview and next explanation; sampled content is understandable but boundaries mix ideas (1/2)."
+3,https://www.rfc-editor.org/rfc/rfc9111.pdf,6,"1.2.2. Delta Seconds
+The delta-seconds rule speciﬁes a non-negative integer, representing time in seconds.
+A recipient parsing a delta-seconds value and converting it to binary form ought to use an
+arithmetic type of at least 31 bits of non-negative integer range. If a cache receives a delta-
+second",C,"[""rfc9111:6:by_paragraph:0"", ""rfc9111:6:by_paragraph:1"", ""rfc9111:6:by_paragraph:2""]",1,"AI-assisted preliminary; Chunk 0 matches B, with the delta-seconds rule/note before starting the overview; understandable but not cleanly isolated (1/2)."
+4,https://www.rfc-editor.org/rfc/rfc9111.pdf,7,"Most commonly, caches store the successful result of a retrieval request: i.e., a 200 (OK) response
+to a GET request, which contains a representation of the target resource ( ).
+However, it is also possible to store redirects, negative results (e.g., 404 (Not Found)), incomplete
+results (e.g., 206 (",A,"[""rfc9111:7:fixed_size:0"", ""rfc9111:7:fixed_size:1"", ""rfc9111:7:fixed_size:2"", ""rfc9111:7:fixed_size:3"", ""rfc9111:7:fixed_size:4"", ""rfc9111:7:fixed_size:5""]",2,"AI-assisted preliminary; Chunk 0 preserves the complete opening discussion of ordinary and other cacheable responses, including the method/key qualification (2/2)."
+4,https://www.rfc-editor.org/rfc/rfc9111.pdf,7,"Most commonly, caches store the successful result of a retrieval request: i.e., a 200 (OK) response
+to a GET request, which contains a representation of the target resource ( ).
+However, it is also possible to store redirects, negative results (e.g., 404 (Not Found)), incomplete
+results (e.g., 206 (",B,"[""rfc9111:7:by_paragraph:0"", ""rfc9111:7:by_paragraph:1"", ""rfc9111:7:by_paragraph:2""]",2,AI-assisted preliminary; Chunk 0 contains the GET/other-method explanation and condition that the method permit caching and define a suitable cache key (2/2).
+4,https://www.rfc-editor.org/rfc/rfc9111.pdf,7,"Most commonly, caches store the successful result of a retrieval request: i.e., a 200 (OK) response
+to a GET request, which contains a representation of the target resource ( ).
+However, it is also possible to store redirects, negative results (e.g., 404 (Not Found)), incomplete
+results (e.g., 206 (",C,"[""rfc9111:7:by_paragraph:0"", ""rfc9111:7:by_paragraph:1"", ""rfc9111:7:by_paragraph:2""]",2,AI-assisted preliminary; Chunk 0 matches B and preserves the complete GET/other-method explanation and cache-key qualification (2/2).
+5,https://www.rfc-editor.org/rfc/rfc9111.pdf,8,"3.1. Storing Header and Trailer Fields
+Caches include all received response header ﬁelds -- including unrecognized ones -- when
+storing a response; this assures that new HTTP header ﬁelds can be successfully deployed.
+However, the following exceptions are made:
+The Connection header ﬁeld and ﬁelds w",A,"[""rfc9111:8:fixed_size:0"", ""rfc9111:8:fixed_size:1"", ""rfc9111:8:fixed_size:2"", ""rfc9111:8:fixed_size:3"", ""rfc9111:8:fixed_size:4"", ""rfc9111:8:fixed_size:5""]",1,"AI-assisted preliminary; Chunks 0-2 divide the header-storage rule from its exceptions; chunk 0 stops inside the Connection-field exception, with later windows carrying qualifications (1/2)."
+5,https://www.rfc-editor.org/rfc/rfc9111.pdf,8,"3.1. Storing Header and Trailer Fields
+Caches include all received response header ﬁelds -- including unrecognized ones -- when
+storing a response; this assures that new HTTP header ﬁelds can be successfully deployed.
+However, the following exceptions are made:
+The Connection header ﬁeld and ﬁelds w",B,"[""rfc9111:8:by_paragraph:0"", ""rfc9111:8:by_paragraph:1"", ""rfc9111:8:by_paragraph:2""]",2,AI-assisted preliminary; Chunk 0 contains the header-storage rule and listed exceptions; chunk 1 continues the proxy-field exception and starts the next section. The sampled policy remains understandable (2/2).
+5,https://www.rfc-editor.org/rfc/rfc9111.pdf,8,"3.1. Storing Header and Trailer Fields
+Caches include all received response header ﬁelds -- including unrecognized ones -- when
+storing a response; this assures that new HTTP header ﬁelds can be successfully deployed.
+However, the following exceptions are made:
+The Connection header ﬁeld and ﬁelds w",C,"[""rfc9111:8:by_paragraph:0"", ""rfc9111:8:by_paragraph:1"", ""rfc9111:8:by_paragraph:2""]",2,"AI-assisted preliminary; C has the same chunks as B, preserving the header-storage rule and exception list across chunks 0-1 (2/2)."
+6,https://www.rfc-editor.org/rfc/rfc9111.pdf,9,"For example, a browser might decode the content coding of a response while it is being received,
+creating a disconnect between the data it has stored and the response's original metadata.
+Updating that stored metadata with a diﬀerent Content-Encoding header ﬁeld would be
+problematic. Likewise, a bro",A,"[""rfc9111:9:fixed_size:0"", ""rfc9111:9:fixed_size:1"", ""rfc9111:9:fixed_size:2"", ""rfc9111:9:fixed_size:3"", ""rfc9111:9:fixed_size:4"", ""rfc9111:9:fixed_size:5"", ""rfc9111:9:fixed_size:6""]",1,AI-assisted preliminary; Chunks 0-1 split the browser metadata examples; chunk 0 cuts the Content-Type example and chunk 1 completes it before moving to incomplete responses (1/2).
+6,https://www.rfc-editor.org/rfc/rfc9111.pdf,9,"For example, a browser might decode the content coding of a response while it is being received,
+creating a disconnect between the data it has stored and the response's original metadata.
+Updating that stored metadata with a diﬀerent Content-Encoding header ﬁeld would be
+problematic. Likewise, a bro",B,"[""rfc9111:9:by_paragraph:0"", ""rfc9111:9:by_paragraph:1"", ""rfc9111:9:by_paragraph:2""]",2,AI-assisted preliminary; Chunk 0 contains both browser examples and the conclusion about automatically processed fields; the sampled explanation is complete (2/2).
+6,https://www.rfc-editor.org/rfc/rfc9111.pdf,9,"For example, a browser might decode the content coding of a response while it is being received,
+creating a disconnect between the data it has stored and the response's original metadata.
+Updating that stored metadata with a diﬀerent Content-Encoding header ﬁeld would be
+problematic. Likewise, a bro",C,"[""rfc9111:9:by_paragraph:0"", ""rfc9111:9:by_paragraph:1"", ""rfc9111:9:by_paragraph:2""]",2,AI-assisted preliminary; Chunk 0 matches B and retains the complete browser examples and processed-field explanation (2/2).
+7,https://www.rfc-editor.org/rfc/rfc9111.pdf,10,"3.5. Storing Responses to Authenticated Requests
+A shared cache use a cached response to a request with an Authorization header ﬁeld
+( ) to satisfy any subsequent request unless the response contains a Cache-
+Control ﬁeld with a response directive (Section 5.2.2) that allows it to be stored by a sha",A,"[""rfc9111:10:fixed_size:0"", ""rfc9111:10:fixed_size:1"", ""rfc9111:10:fixed_size:2"", ""rfc9111:10:fixed_size:3"", ""rfc9111:10:fixed_size:4"", ""rfc9111:10:fixed_size:5""]",1,AI-assisted preliminary; Chunks 0-1 split the authenticated-response exception list; chunk 0 ends after must-revalidate and chunk 1 supplies public and s-maxage (1/2).
+7,https://www.rfc-editor.org/rfc/rfc9111.pdf,10,"3.5. Storing Responses to Authenticated Requests
+A shared cache use a cached response to a request with an Authorization header ﬁeld
+( ) to satisfy any subsequent request unless the response contains a Cache-
+Control ﬁeld with a response directive (Section 5.2.2) that allows it to be stored by a sha",B,"[""rfc9111:10:by_paragraph:0"", ""rfc9111:10:by_paragraph:1"", ""rfc9111:10:by_paragraph:2""]",2,"AI-assisted preliminary; Chunk 0 contains the complete authenticated-request rule and its three qualifying directives: must-revalidate, public, and s-maxage (2/2)."
+7,https://www.rfc-editor.org/rfc/rfc9111.pdf,10,"3.5. Storing Responses to Authenticated Requests
+A shared cache use a cached response to a request with an Authorization header ﬁeld
+( ) to satisfy any subsequent request unless the response contains a Cache-
+Control ﬁeld with a response directive (Section 5.2.2) that allows it to be stored by a sha",C,"[""rfc9111:10:by_paragraph:0"", ""rfc9111:10:by_paragraph:1"", ""rfc9111:10:by_paragraph:2""]",2,AI-assisted preliminary; Chunk 0 matches B and preserves the complete authenticated-request rule and all three qualifying directives (2/2).
+8,https://www.rfc-editor.org/rfc/rfc9111.pdf,11,"When more than one suitable response is stored, a cache use the most recent one (as
+determined by the Date header ﬁeld). It can also forward the request with ""Cache-Control: max-
+age=0"" or ""Cache-Control: no-cache"" to disambiguate which response to use.
+A cache without a clock ( ) revalidate stored ",A,"[""rfc9111:11:fixed_size:0"", ""rfc9111:11:fixed_size:1"", ""rfc9111:11:fixed_size:2"", ""rfc9111:11:fixed_size:3"", ""rfc9111:11:fixed_size:4"", ""rfc9111:11:fixed_size:5"", ""rfc9111:11:fixed_size:6""]",1,"AI-assisted preliminary; Chunk 0 retains the initial most-recent-response and clockless-cache statements; later candidate windows cover Vary matching and its qualifications, making the larger sample fragmented (1/2)."
+8,https://www.rfc-editor.org/rfc/rfc9111.pdf,11,"When more than one suitable response is stored, a cache use the most recent one (as
+determined by the Date header ﬁeld). It can also forward the request with ""Cache-Control: max-
+age=0"" or ""Cache-Control: no-cache"" to disambiguate which response to use.
+A cache without a clock ( ) revalidate stored ",B,"[""rfc9111:11:by_paragraph:0"", ""rfc9111:11:by_paragraph:1"", ""rfc9111:11:by_paragraph:2""]",2,AI-assisted preliminary; Chunk 0 includes the complete initial response-selection/clockless-cache statements and begins the following Vary section; the sampled opening idea is intact (2/2).
+8,https://www.rfc-editor.org/rfc/rfc9111.pdf,11,"When more than one suitable response is stored, a cache use the most recent one (as
+determined by the Date header ﬁeld). It can also forward the request with ""Cache-Control: max-
+age=0"" or ""Cache-Control: no-cache"" to disambiguate which response to use.
+A cache without a clock ( ) revalidate stored ",C,"[""rfc9111:11:by_paragraph:0"", ""rfc9111:11:by_paragraph:1"", ""rfc9111:11:by_paragraph:2""]",2,AI-assisted preliminary; C has the same text as B; chunk 0 retains the complete opening response-selection statements (2/2).
+9,https://www.rfc-editor.org/rfc/rfc9111.pdf,12,"A ""fresh"" response is one whose age has not yet exceeded its freshness lifetime. Conversely, a
+""stale"" response is one where it has.
+A response's ""freshness lifetime"" is the length of time between its generation by the origin server
+and its expiration time. An ""explicit expiration time"" is the time ",A,"[""rfc9111:12:fixed_size:0"", ""rfc9111:12:fixed_size:1"", ""rfc9111:12:fixed_size:2"", ""rfc9111:12:fixed_size:3"", ""rfc9111:12:fixed_size:4"", ""rfc9111:12:fixed_size:5"", ""rfc9111:12:fixed_size:6""]",1,"AI-assisted preliminary; Windows 0-5 split the definitions and freshness conditions; chunk 0 has fresh/stale definitions but cuts the freshness-lifetime definition, continued in later windows (1/2)."
+9,https://www.rfc-editor.org/rfc/rfc9111.pdf,12,"A ""fresh"" response is one whose age has not yet exceeded its freshness lifetime. Conversely, a
+""stale"" response is one where it has.
+A response's ""freshness lifetime"" is the length of time between its generation by the origin server
+and its expiration time. An ""explicit expiration time"" is the time ",B,"[""rfc9111:12:by_paragraph:0"", ""rfc9111:12:by_paragraph:1"", ""rfc9111:12:by_paragraph:2""]",2,AI-assisted preliminary; Chunk 0 contains the complete fresh/stale and freshness-lifetime definitions and begins explicit expiration; the sampled definitions are understandable (2/2).
+9,https://www.rfc-editor.org/rfc/rfc9111.pdf,12,"A ""fresh"" response is one whose age has not yet exceeded its freshness lifetime. Conversely, a
+""stale"" response is one where it has.
+A response's ""freshness lifetime"" is the length of time between its generation by the origin server
+and its expiration time. An ""explicit expiration time"" is the time ",C,"[""rfc9111:12:by_paragraph:0"", ""rfc9111:12:by_paragraph:1"", ""rfc9111:12:by_paragraph:2""]",2,AI-assisted preliminary; Chunk 0 matches B and preserves the fresh/stale and freshness-lifetime definitions (2/2).
+10,https://www.rfc-editor.org/rfc/rfc9111.pdf,13,"A cache recipient consider a date with a zone abbreviation other than ""GMT"" to be
+invalid for calculating expiration.
+Note that freshness applies only to cache operation; it cannot be used to force a user agent to
+refresh its display or reload a resource. See Section 6 for an explanation of the diﬀe",A,"[""rfc9111:13:fixed_size:0"", ""rfc9111:13:fixed_size:1"", ""rfc9111:13:fixed_size:2"", ""rfc9111:13:fixed_size:3"", ""rfc9111:13:fixed_size:4"", ""rfc9111:13:fixed_size:5"", ""rfc9111:13:fixed_size:6""]",2,"AI-assisted preliminary; Chunk 0 contains the full non-GMT date caveat and complete statement that freshness governs cache operation, not user-agent display refresh; it then starts section 4.2.1 (2/2)."
+10,https://www.rfc-editor.org/rfc/rfc9111.pdf,13,"A cache recipient consider a date with a zone abbreviation other than ""GMT"" to be
+invalid for calculating expiration.
+Note that freshness applies only to cache operation; it cannot be used to force a user agent to
+refresh its display or reload a resource. See Section 6 for an explanation of the diﬀe",B,"[""rfc9111:13:by_paragraph:0"", ""rfc9111:13:by_paragraph:1"", ""rfc9111:13:by_paragraph:2""]",2,AI-assisted preliminary; Chunk 0 contains the complete non-GMT date caveat and freshness-versus-display statement before the calculation rules (2/2).
+10,https://www.rfc-editor.org/rfc/rfc9111.pdf,13,"A cache recipient consider a date with a zone abbreviation other than ""GMT"" to be
+invalid for calculating expiration.
+Note that freshness applies only to cache operation; it cannot be used to force a user agent to
+refresh its display or reload a resource. See Section 6 for an explanation of the diﬀe",C,"[""rfc9111:13:by_paragraph:0"", ""rfc9111:13:by_paragraph:1"", ""rfc9111:13:by_paragraph:2""]",2,AI-assisted preliminary; Chunk 0 matches B and preserves both complete opening caveats before the calculation rules (2/2).

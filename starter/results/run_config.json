@@ -1,0 +1,60 @@
+{
+  "run_id": "20261114T040011Z",
+  "started_at_utc": "2026-11-14T04:00:11.753077+00:00",
+  "command": "python -m src.run (from starter/)",
+  "corpus": "data/rfc9111.pdf",
+  "manifest": "data/manifest.json",
+  "benchmark": "benchmark/questions.json",
+  "strategies": {
+    "A": {
+      "chunker": "fixed_size",
+      "size_characters": 500,
+      "overlap_characters": 50,
+      "filtering": "none"
+    },
+    "B": {
+      "chunker": "by_paragraph",
+      "max_characters": 1000,
+      "filtering": "none"
+    },
+    "C": {
+      "chunker": "by_paragraph",
+      "max_characters": 1000,
+      "filtering": "question-supplied section equality only"
+    }
+  },
+  "store": {
+    "backend": "PostgreSQL + pgvector",
+    "distance": "cosine",
+    "top_k": 3,
+    "persistent": true
+  },
+  "manual_assessment": {
+    "performed": false,
+    "labels": "blank templates; no human judgments inferred"
+  },
+  "model": {
+    "provider": "AWS Bedrock Runtime",
+    "name": "global.cohere.embed-v4:0",
+    "dimensions": 1536,
+    "region": "ap-southeast-2",
+    "document_input_type": "search_document",
+    "query_input_type": "search_query"
+  },
+  "database": {
+    "configured": true,
+    "url": "redacted",
+    "schema": "chunks (strategy-scoped)"
+  },
+  "environment": {
+    "dotenv_loaded_without_override": true,
+    "api_keys_recorded": false
+  },
+  "completed_at_utc": "2026-11-14T04:01:32.780157+00:00",
+  "total_wall_seconds": 81.02710226199997,
+  "page_count_physical": 35,
+  "eligible_page_count": 30,
+  "benchmark_count": 20,
+  "trace_count": 60,
+  "status": "completed"
+}

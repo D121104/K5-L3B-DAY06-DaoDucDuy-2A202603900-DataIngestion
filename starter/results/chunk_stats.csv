@@ -1,0 +1,4 @@
+strategy,chunk_count,total_characters,mean_chunk_characters,min_chunk_characters,max_chunk_characters,embedding_seconds,upsert_seconds,ingest_seconds,estimated_cost_usd,cost_note
+A,172,79454,461.9418604651163,69,500,15.581703628000469,0.3238714880008047,15.905575116001273,,Provider usage/cost is not reported by this client; not estimated.
+B,86,72297,840.6627906976744,110,1000,7.82451774600122,0.20111571099914727,8.025633457000367,,Provider usage/cost is not reported by this client; not estimated.
+C,86,72297,840.6627906976744,110,1000,5.759458279999308,0.16121690700128966,5.920675187000597,,Provider usage/cost is not reported by this client; not estimated.

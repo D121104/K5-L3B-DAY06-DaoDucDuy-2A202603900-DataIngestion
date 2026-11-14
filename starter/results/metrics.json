@@ -1,0 +1,54 @@
+{
+  "run_id": "20261114T040011Z",
+  "method": "Evidence is an exact normalized substring of a single retrieved chunk, on the gold source and page; no human-verified alternatives are counted.",
+  "metrics": {
+    "A": {
+      "dev": {
+        "denominator": 15,
+        "hit_at_1_count": 5,
+        "hit_at_1_rate": 0.3333333333333333,
+        "evidence_hit_at_3_count": 5,
+        "evidence_hit_at_3_rate": 0.3333333333333333
+      },
+      "test": {
+        "denominator": 5,
+        "hit_at_1_count": 2,
+        "hit_at_1_rate": 0.4,
+        "evidence_hit_at_3_count": 2,
+        "evidence_hit_at_3_rate": 0.4
+      }
+    },
+    "B": {
+      "dev": {
+        "denominator": 15,
+        "hit_at_1_count": 5,
+        "hit_at_1_rate": 0.3333333333333333,
+        "evidence_hit_at_3_count": 6,
+        "evidence_hit_at_3_rate": 0.4
+      },
+      "test": {
+        "denominator": 5,
+        "hit_at_1_count": 3,
+        "hit_at_1_rate": 0.6,
+        "evidence_hit_at_3_count": 3,
+        "evidence_hit_at_3_rate": 0.6
+      }
+    },
+    "C": {
+      "dev": {
+        "denominator": 15,
+        "hit_at_1_count": 5,
+        "hit_at_1_rate": 0.3333333333333333,
+        "evidence_hit_at_3_count": 6,
+        "evidence_hit_at_3_rate": 0.4
+      },
+      "test": {
+        "denominator": 5,
+        "hit_at_1_count": 3,
+        "hit_at_1_rate": 0.6,
+        "evidence_hit_at_3_count": 3,
+        "evidence_hit_at_3_rate": 0.6
+      }
+    }
+  }
+}

@@ -8,7 +8,7 @@ Bộ khởi động **tùy chọn** cho lab cá nhân. Docker Compose tạo Post
 starter/
 ├── docker-compose.yml     # PostgreSQL 16 + pgvector, chỉ mở cổng local
 ├── init.sql               # bật extension khi tạo database mới
-├── requirements.txt       # psycopg, pypdf và python-dotenv
+├── requirements.txt       # psycopg, pypdf, python-dotenv và Streamlit
 ├── .env.example           # cấu hình mẫu; copy thành .env
 ├── scripts/check_setup.py # kiểm tra kết nối và extension (đã chạy được)
 ├── src/
@@ -18,7 +18,8 @@ starter/
 │   ├── embeddings.py      # TODO: chọn model API hoặc local
 │   ├── store.py           # TODO: lưu vector, metadata và filter
 │   ├── evaluation.py      # TODO: chấm truy xuất, lưu trace
-│   └── run.py             # TODO: kết nối các bước thành pipeline
+│   ├── run.py             # pipeline ingestion/benchmark
+│   └── chat.py            # Streamlit chat grounded in strategy B
 ├── data/                  # bạn tự chuẩn bị corpus được phép sử dụng
 └── results/               # lưu kết quả của bạn
 ```
@@ -63,3 +64,13 @@ docker compose -p day6_student_starter stop
 5. Sau khi hoàn thiện, chạy `python -m src.run` từ thư mục `starter/`. Trước khi làm TODO, lệnh này **chủ động báo `NotImplementedError`**.
 
 Lưu code, cấu hình, kết quả và lệnh chạy để người chấm tái lập; không commit key, dữ liệu mật hoặc dữ liệu không có quyền chia sẻ.
+
+## 4. Chạy chat local
+
+Sau khi đã nạp RFC 9111 vào PostgreSQL bằng strategy B và cấu hình `.env`, chạy từ thư mục `starter/`:
+
+```bash
+streamlit run src/chat.py
+```
+
+Streamlit mở giao diện local mặc định tại `http://localhost:8501`. Chat dùng `EMBEDDING_MODEL` để truy xuất top-3 chunk strategy B và gọi AWS Bedrock Converse (`CHAT_MODEL`, mặc định `amazon.nova-lite-v1:0`). Region dùng `AWS_REGION`, rồi `AWS_DEFAULT_REGION`, mặc định `ap-southeast-2`. AWS credentials phải được cấu hình qua AWS SDK credential chain. Không commit `.env` hoặc thông tin xác thực.
