@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed_size,500,50,"document_id, source, page, section",none,"AWS Bedrock Cohere Embed v4, 1536 dimensions","retrospective hypothesis (not preregistered): fixed-size 500/50 chunks may split semantic units, limiting exact evidence retrieval compared with paragraph chunks.",5/15,5/15,2/5,2/5,"run_id 20261114T040011Z; exact normalized single-chunk evidence proxies; cost not estimated."
+B,by_paragraph,max 1000,,"document_id, source, page, section",none,"AWS Bedrock Cohere Embed v4, 1536 dimensions","retrospective hypothesis (not preregistered): paragraph chunks capped at 1000 characters may preserve semantic units and improve exact evidence retrieval over fixed-size chunks.",5/15,6/15,3/5,3/5,"run_id 20261114T040011Z; exact normalized single-chunk evidence proxies; cost not estimated."
+C,by_paragraph,max 1000,,"document_id, source, page, section","question-supplied exact section equality; dev q12=5.2.2.2. must-revalidate, q15=5.2.2.7. private; test q19=4.4. Invalidating Stored Responses","AWS Bedrock Cohere Embed v4, 1536 dimensions","retrospective hypothesis (not preregistered): exact section filtering may constrain retrieval to relevant sections and improve exact evidence retrieval over unfiltered paragraph chunks.",5/15,6/15,3/5,3/5,"run_id 20261114T040011Z; exact normalized single-chunk evidence proxies; cost not estimated."
